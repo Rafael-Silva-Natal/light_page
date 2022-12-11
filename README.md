@@ -1,5 +1,7 @@
 # https---github.com-Rafael-Silva-Natal-Ligth_Joystik_from_Htmlpages
 
+   Olá programadores! toda ajuda é bem vinda;) 
+
     Esse projeto esta sendo desenvolvido para a manipulacão de robos, através de
 bits de luz do monitor e dominadas com a programaçao,  com a funcionalidade do 
 Node Soquet.io uma pagina on line poderá conectar computadores pela internet, seguindo
