@@ -1,0 +1,94 @@
+body{
+    background-color:#000;/*css da cor de fundo*/
+  }
+  
+ 
+  marquee{
+    color:#f5f6fa;
+    background-color:#180e3d ;/*css marquee(texto em movimento)*/
+    height: 15;  
+    width:1275 ;
+    behavior: scrool ;
+    direction: Left ;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7em;  /*css do texto principal dentro do marquee*/
+    margin: auto;
+  }
+  
+  
+  
+  a{
+    font-size: 0.9em; /*css que define os padrões de apresentação dos links*/
+    color:#32226c;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin: auto;
+  }
+  
+  a:hover{
+    color: rgb(153, 48, 223);/*css que define o efeito de apresentação do link*/
+  }
+  #paragrafo3{
+    color: #32226c;
+    font-size: 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;/*css que define padroes ao texto que referencia o Replit*/
+    margin: 0;
+    margin: auto;
+  }
+  #paragrafo3:hover{
+    color: green;
+  }
+  
+  a , #paragrafo3{
+    display: inline-block;
+  }
+
+ 
+
+  #paragrafo2{/*css que define padrões ao cabeçalho do canvas*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(21, 64, 84);
+    width: 100%;
+    margin: 0;
+    margin:auto;
+    font-size: 0.8em;
+  }
+ 
+  #play1{
+    color: rgb(7, 95, 65);
+    margin: 0;
+    margin:auto;
+  }
+  #play1:hover{
+    color: rgb(137, 178, 40);
+  }
+  
+  #desenho1{
+        border: 5px solid #000;/*css do canvas player1*/   
+        margin: 0;
+        margin: auto;
+    }
+  
+  
+  #paragrafoX{/*css que define padrões do rodapé do canvas*/
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        margin: auto;
+        width: 100%;
+        font-size: 0.6em;
+        color: rgb(7, 95, 65);
+      }
+
+ 
+  #paragrafoX:hover{
+    color: rgb(137, 178, 40);
+  }
+  
+  
+  #separador{
+    border: 5px solid #000;/*css do canvas separador oculto*/   
+    margin: 0;
+    margin:auto;
+}
