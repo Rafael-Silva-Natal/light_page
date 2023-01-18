@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# LigthJoystik_2
+Esse projeto esta sendo desenvolvido para o manuseio de robôs através de bits de luz do monitor, e manipuladas com a programação. Com as funcionalidades do Node e Soquet.io, uma página on line poderá conectar computadores pela internet em tempo real; e seguindo a lógica de jogos multplayer com o canvas do html, a base do projeto foi desenvolvida. Basicamente é uma página html com a apresentaçao de canvas manipulaveis pelos usuários através das setas do teclado, que poderá apagar e acender bits de luz no monitor. Fica a disposição do usuário os tipos de sensores usados para captar as variações de ondas do monitor; e a adaptação de joystic para melhor comodidade. Os tipos de robôs que poderão ser usados é opcional, mas fica a sugestão de arduinos.
 
-______Esse projeto esta sendo desenvolvido para o controle de robos através de bits de luz do monitor, e manipuladas com a programaçao. Com as funcionalidades do Node e Soquet.io, uma pagina on line poderá conectar computadores pela internet em tempo real; e seguindo a logica de jogos multplayer com o canvas do html, a base do projeto foi desenvolvida. Basicamente é uma pagina html com a apresentaçao de canvas manipulaveis pelos usuários atraves das setas do teclado, que poderar apagar e acender bits de luz no monitor. Fica a disposiçao do usuário os tipos de sensores usados para captar as variaçoes de ondas do monitor; e a adaptaçao de joystic para melhor comodidade. Os tipos de robos que poderão ser usados é opcional, mas fica a dica de arduinos...
-=======
-# https---github.com-Rafael-Silva-Natal-Ligth_Joystik_from_Htmlpages
-
-   Olá programadores! toda ajuda é bem vinda;) 
-
- ______Esse projeto esta sendo desenvolvido para o manuseio de robos através de bits de luz do monitor, e manipuladas com a programaçao. Com as funcionalidades do Node e Soquet.io, uma pagina on line poderá conectar computadores pela internet em tempo real; e seguindo a logica de jogos multplayer com o canvas do html, a base do projeto foi desenvolvida. Basicamente é uma pagina html com a apresentaçao de canvas manipulaveis pelos usuários atraves das setas do teclado, que poderar apagar e acender bits de luz no monitor. Fica a disposiçao do usuário os tipos de sensores usados para captar as variaçoes de ondas do monitor;e a adaptaçao de joystic para melhor comodidade. Os tipos de robos que poderão ser usados é opcional, mas fica a dica de arduinos...
-
->>>>>>> 5c45cb334292e1af7a1cef35d2ee3d392ef67f86
+O complemento básico de uso da página é a interatividade em tempo real com a webcam, infelizmente atualizações ainda estão sendo trabalhadas e a página ainda não fornece suporte a essa funcionalidade, no entanto outros aplicativos podem fornecer esse suporte; ao acessar uma video conferência com qualquer outro aplicativo, essa pégina pode funcionar em segundo plano, dessa forma é possivel visualizar um robô recebendo comandos através de bits de luz, em qualquer parte do mundo!
