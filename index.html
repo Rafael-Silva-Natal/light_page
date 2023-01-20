@@ -1,54 +1,275 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Ligth_Joystik_Page</title>
+    <title>LigthJoystik</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="appServer.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://replit.com/@RafaelSilva666/ClosedExpertIdentifier#LigthJoystik/index.js"></script>
 
+
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+    <style type ="text/css">
+        #desenho1{
+            border: 5px solid rgb(51,45,133);
+        } 
+    </style><!--borda do canvas-->
   </head>
-  <body>
+  <body style="background-color:#000">
 
-  <marquee>LigthJoystik_versão 1.0_Arduino_project_Rafael Silva_Natal_RN_Brasil.
-  Este projeto esta sendo desenvolvido para o manuseio de robôs através de
-    bits de luz do monitor, e manipuladas com a programação.
-    Com as funcionalidades do Node e Soquet.io, uma
-    página on line poderá conectar computadores pela internet em tempo real; e seguindo a lógica de jogos multplayer
-    com o canvas do html, a base do projeto foi desenvolvida. Basicamente é uma página
-    html com a apresentação de canvas manipuláveis pelos usuários através das setas
-    do teclado, que poderá apagar e acender bits de luz no monitor. Fica a disposição
-    do usuário os tipos de sensores usados para captar as variações de ondas do monitor;
-    e a adaptação de joystic para melhor comodidade. Os tipos de robôs que poderão ser
-    usados é opcional, mas fica a sugestão de arduinos.
-  </marquee>
-  
- 
-   
-  <PRE id="paragrafo2"><h6 id="play1">  LigthJoystik                                                                        Player1</h6></PRE>
-  
-  
-   <canvas id="desenho1" width="1225" height="150"><!--Estrutura do canvas player2-->
-    <h1>Teste2</h1>
-    </canvas>
-<PRE id="paragrafoX">  Use as Setas e as letras a & s do teclado...</PRE>
+ <script>
+      var senhaCorreta = "joystik";
+      while (true){
+        var senhaInserida = prompt("Insira a senha:");
+        if (senhaInserida === senhaCorreta) {
+    // Sai do looping e continua com o resto do código 
+    break;
+      }
+      else {
+        alert
+    alert("Você não foi convidado para esse evento! Entre em contato com o adminstrador, para receber a senha...");
 
 
-<canvas id="separador" width="1" height="370"><!--Estrutura do canvas player2-->
+      }
+    }
+      </script>
+    
+    <header><center><marquee heigth="15" width="1275" behavior="scrool" direction="Left" bgcolor="#180e3d" font-size= 0.7em><font color="#f5f6fa">LigthJoystik_versão1.0_Arduino_project_Rafael Silva_Natal_RN_Brasil -Esse projeto esta sendo desenvolvido para o manuseio de robôs através de
+bits de luz do monitor, e manipuladas com a programação. Com as funcionalidades do
+Node e Soquet.io, uma página on line poderá conectar computadores pela internet em tempo real;
+ e seguindo a lógica de jogos multplayer com o canvas do html, a base do projeto foi
+ desenvolvida. Basicamente é uma página html com a apresentaçao de canvas
+ manipulaveis pelos usuários através das setas do teclado, que poderá apagar e acender bits de
+luz no monitor. Fica a disposição do usuário os tipos de sensores usados para captar
+ as variações de ondas do monitor; e a adaptação de joystik para melhor comodidade. Os tipos de
+ robôs que poderão ser usados é opcional, mas fica a sugestão de arduinos. O complemento básico de uso da página é a interatividade em tempo real com a webcam, infelizmente atualizações ainda estão sendo trabalhadas e a página ainda não fornece suporte a essa funcionalidade, no entanto outros aplicativos podem fornecer esse suporte; ao acessar uma video conferência com qualquer outro aplicativo, essa pégina pode funcionar em segundo plano, dessa forma é possivel visualizar um robô recebendo comandos através de bits de luz, em qualquer parte do mundo!</font></marquee></center></header>
+    <font 
+      font-family= "Arial, Helvetica, sans-serif"
+      width= 100%
+      margin= 0
+      margin="auto"
+      ><font color= yellow>Ligth</font><font color= aqua>Joystik</font></font>
+  
+<br>
+<canvas id="desenho1" width="250" height="150"><!--Estrutura do canvas-->
+<h1>Teste</h1>
+<h3>teste browser</h3>
+</canvas>
+
+    <script type="text/javascript"></script>
+<script>
+            var socket = io();
+
+
+var canvas=document.getElementById("desenho1");// o Elemento byId "desenho1" é o mesmo que indica as bordas do canvas
+var ctx=canvas.getContext('2d');
+
+
+ctx.fillStyle="#1C1C1C";
+ctx.beginPath();
+ctx.rect(0,0,150,150); //cor de fundo no canvas direcionais
+ctx.fill();
+ctx.fillStyle="#180e3d";
+ctx.beginPath();
+ctx.rect(150,0,100,150);//cor de fundo no canvas botoes
+ctx.fill();
+
+ctx.fillStyle = "#000";//apertando o botao para cima
+ctx.beginPath();
+ctx.rect(55,10,40,40); 
+ctx.fill();
+socket.on("cima", function(){//apertando o botao para cima
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(55,10,40,40);
+    ctx.fill();
+});//apertando o botao para cima
+
+socket.on("cima2", function(){//soltando o botao para cima
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+    ctx.rect(55,10,40,40);
+    ctx.fill();
+});//soltando o botao para cima
+
+//----------------------------
+
+ctx.fillStyle="#000";//apertando o botao para baixo
+ctx.beginPath();
+ctx.rect(55,100,40,40); 
+ctx.fill();
+socket.on("baixo", function(){//apertando o botao para baixo
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(55,100,40,40);
+    ctx.fill();
+});//apertando o botao para baixo
+
+socket.on("baixo2", function(){//soltando o botao para baixo
+    ctx.fillStyle= "#000";
+    ctx.beginPath();
+    ctx.rect(55,100,40,40);
+    ctx.fill();
+});//soltando o botao para baixo
+
+//--------------------------
+
+ctx.fillStyle = "#000";//apertando o botao para direita
+ctx.beginPath();
+ctx.rect(100,55,40,40); 
+ctx.fill();
+socket.on("direita", function(){//apertando o botao para direita
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(100,55,40,40);
+    ctx.fill();
+});//apertando o botao para direita
+
+socket.on("direita2", function(){//soltando o botao para direita
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+    ctx.rect(100,55,40,40);
+    ctx.fill();
+});//soltando o botao para direita
+
+//-----------------------
+
+ctx.fillStyle = "#000";//apertando o botao para esquerda
+ctx.beginPath();
+ctx.rect(10,55,40,40); 
+ctx.fill();
+socket.on("esquerda", function(){//apertando o botao para esquerda
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(10,55,40,40);
+    ctx.fill();
+});//apertando o botao para esquerda
+
+socket.on("esquerda2", function(){//soltando o botao para esquerda
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+    ctx.rect(10,55,40,40);
+    ctx.fill();
+});//soltando o botao para esquerda
+
+//-------------------------
+
+ctx.fillStyle = "#000";//apertando o botao 1
+ctx.beginPath();
+ctx.rect(155,35,40,40); 
+ctx.fill();
+socket.on("A_botao", function(){//apertando o botao 1
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(155,35,40,40);
+    ctx.fill();
+});//apertando o botao 1
+
+socket.on("A_botao2", function(){//soltando o botao 1
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+    ctx.rect(155,35,40,40);
+    ctx.fill();
+});//soltando o botao 1
+
+
+//-----------------------
+
+ctx.fillStyle = "#000";//apertando o botao 2
+ctx.beginPath();
+ctx.rect(205,75,40,40); 
+ctx.fill();
+socket.on("S_botao", function(){//apertando o botao 2
+    ctx.fillStyle= "#f5f6fa";
+    ctx.beginPath();
+    ctx.rect(205,75,40,40);
+    ctx.fill();
+});//apertando o botao 2
+
+socket.on("S_botao2", function(){//soltando o botao 2
+    ctx.fillStyle = "#000";
+    ctx.beginPath();
+    ctx.rect(205,75,40,40);
+    ctx.fill();
+});//soltando o botao 2
+
+
+
+
+
+    //comandos de teclado
+
+
+    window.addEventListener('keydown', function(event) {
+  if (event.keyCode === 38) {
+    socket.emit("arrow-up-keydown");
+  } else if (event.keyCode === 40) {
+    socket.emit("arrow-down-keydown");//cima e baixo
+  }
+  if (event.keyCode === 39) {
+    socket.emit("arrow-right-keydown");
+  } else if (event.keyCode === 37) {
+    socket.emit("arrow-left-keydown");//direita e esquerda
+  }
+  //------botoes
+  if (event.keyCode === 65) {
+    socket.emit("a-keydown");
+  } else if (event.keyCode === 83) {
+    socket.emit("s-keydown");//botoes
+  }
+});
+
+
+window.addEventListener('keyup', function(event) {
+  if (event.keyCode === 38) {
+    socket.emit("arrow-up-keyup");
+  } else if (event.keyCode === 40) {
+    socket.emit("arrow-down-keyup");//cima e baixo
+  }
+  if (event.keyCode === 39) {
+    socket.emit("arrow-right-keyup");
+  } else if (event.keyCode === 37) {
+    socket.emit("arrow-left-keyup");//direita e esquerda
+  }
+  //-----------botoes
+  if (event.keyCode === 65) {
+    socket.emit("a-keyup");
+  } else if (event.keyCode === 83) {
+    socket.emit("s-keyup");//direita e esquerda
+  }
+
+});
+    </script>
+
+
+    <br>
+<font color=white
+       font-family="Arial, Helvetica, sans-serif"
+        margin= 0
+        margin= auto
+        width= 100%
+        >Use as <font color=violet>setas</font> e as letras <font color=red>a</font> & <font color=orange>s</font> do teclado
+</font>
+    <br>
+<canvas id="separador" width="1" height="230"><!--Estrutura do canvas player2-->
   <h1>Teste2</h1>
   </canvas>
+<p align=right sinze=1.0em margin= 0 margin= auto>
+<a href="https://github.com/Rafael-Silva-Natal/LigthJoystik_version1.0_from_Htmlpages">Projeto com repositório público no GitHub...</a></p>
 
-<a href="https://github.com/Rafael-Silva-Natal/https---github.com-Rafael-Silva-Natal-Ligth_Joystik_from_Htmlpages">Projeto com repositório público no GitHub...</a>
+    <p align=right ><font size= 0.7em color= green margin= 0 margin= auto width= 100% >Protótipo de página feita no REPLIT.</br><font color= "#f5f6fa">Working...</font></font></p>
 
-<pre id="paragrafo3">                                                                                                                                                                                                                                                     Protótipo de página feita no REPL.IT</pre>
+<script>
+  function noscroll(){
+window.scrollTo(0,0);
+}
+window.addEventListener("scroll",noscroll);
+</script>
 
-    
-    
-<script src="CanvScriptPlay1.js"></script>
-<script src="CanvTeclEvent.js"></script>
-<script src="eventScript.js"></script>
 
+
+  
   </body>
 </html>
+
