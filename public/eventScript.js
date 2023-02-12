@@ -1,5 +1,5 @@
 
-var senhaCorreta = "joystik";
+var senhaCorreta = "controle";
 while (true){
   var senhaInserida = prompt("Insira a senha:");
   if (senhaInserida === senhaCorreta) {
